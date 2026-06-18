@@ -38,10 +38,28 @@ GitHub Actions 없이 **Cloudflare Pages Git 연동**으로 배포합니다.
 
 5. **Environment variables** (Production + Preview) 추가 — 아래 2절 참고
 6. 배포 성공 후 URL 확인: `https://ai-planner-7y0.pages.dev`
-7. (선택) 기존 **Workers** `capstone-project-2` 프로젝트는 Settings에서 삭제해 중복 방지
+7. 아래 **기존 Workers 삭제** 진행 (Pages `ai-planner`와 별개)
 
 > Pages에는 **Deploy command / Version command** 필드가 없습니다.  
 > `npx wrangler deploy`가 보이면 Workers 프로젝트입니다 — Pages로 새로 만드세요.
+
+### 기존 Workers `capstone-project-2` 삭제
+
+Pages(`ai-planner-7y0.pages.dev`) 배포가 끝났으면 **Workers 프로젝트만** 삭제합니다.  
+**Pages 프로젝트(ai-planner)는 삭제하지 마세요.**
+
+1. [Cloudflare Dashboard](https://dash.cloudflare.com) → **Workers & Pages**
+2. 목록에서 **`capstone-project-2`** 선택  
+   - 타입: **Worker** (Pages `ai-planner`와 이름이 다름)
+   - `Deploy command: npx wrangler deploy`가 보이면 Worker가 맞음
+3. **Settings** → 맨 아래 **Delete** (또는 **Delete Worker**)
+4. 확인 창에 `capstone-project-2` 입력 후 삭제
+
+CLI로 삭제할 경우 (로컬에 wrangler 설치·로그인 후):
+
+```bash
+npx wrangler delete capstone-project-2
+```
 
 ---
 
