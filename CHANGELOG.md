@@ -4,6 +4,25 @@ All notable changes to **AI Future Planner for Students** are documented here.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.4.1] - 2026-06-18
+
+### Added
+
+- `scripts/generate-config.js` — Cloudflare Pages 빌드 시 `js/config.js` 생성
+- `package.json` with `npm run build` for CF Pages
+- [docs/DEPLOY.md](docs/DEPLOY.md) — Supabase/Cloudflare 키 입력 및 배포 가이드
+
+### Changed
+
+- Cloudflare Pages Git 연동 배포로 전환 (GitHub Actions 워크플로 제거)
+- Supabase Auth redirect URL 문서에 `capstone-project-2.pages.dev` 추가
+
+### Removed
+
+- `.github/workflows/deploy-cloudflare-pages.yml`
+
+---
+
 ## [0.4.0] - 2026-06-18
 
 ### Added
