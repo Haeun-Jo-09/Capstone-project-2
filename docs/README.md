@@ -12,6 +12,7 @@
 | [AI_Future_Planner_for_Students.md](./AI_Future_Planner_for_Students.md) | 제품 비전 및 핵심 컨셉 (3-Layer Goal Hierarchy) |
 | [DEVELOPMENT_PLAN.md](./DEVELOPMENT_PLAN.md) | 개발 로드맵, Phase별 계획, 기술 스택, 백로그 |
 | [SOCIAL_LOGIN_SETUP_GUIDE.md](./SOCIAL_LOGIN_SETUP_GUIDE.md) | Google OAuth (Supabase Auth) 설정 가이드 |
+| [DEPLOY.md](./DEPLOY.md) | **Cloudflare Pages + Supabase 키/배포 설정** |
 | [../CHANGELOG.md](../CHANGELOG.md) | 버전별 변경 이력 (커밋 기반) |
 
 ---
@@ -32,20 +33,12 @@
 3. Edge Functions Secrets에 `GEMINI_API_KEY` 설정
 4. Live Server 등으로 `http://localhost:5500` 에서 `index.html` 실행
 
-## Cloudflare Pages 배포 (main merge 시 자동)
+## Cloudflare Pages 배포 (Git push → 자동)
 
-GitHub Actions가 [`.github/workflows/deploy-cloudflare-pages.yml`](../.github/workflows/deploy-cloudflare-pages.yml) 를 실행합니다.
+GitHub Actions 없이 **Cloudflare Pages Git 연동**으로 배포합니다.  
+Build command: `node scripts/generate-config.js` — 환경 변수 `SUPABASE_URL`, `SUPABASE_ANON_KEY` 필요.
 
-**Repository Secrets** (Haeun-Jo-09/Capstone-project-2):
-
-| Secret | 설명 |
-|--------|------|
-| `CLOUDFLARE_API_TOKEN` | Cloudflare API token (Pages Edit) |
-| `CLOUDFLARE_ACCOUNT_ID` | Cloudflare account ID |
-| `SUPABASE_ANON_KEY` | Supabase publishable/anon key |
-| `SUPABASE_URL` | (선택) 기본값: `https://bcnhmrvylpkocetfqidh.supabase.co` |
-
-Supabase Auth redirect URL에 Cloudflare Pages 도메인(`*.pages.dev`)도 등록하세요.
+전체 설정: **[DEPLOY.md](./DEPLOY.md)**
 
 변경 이력: [CHANGELOG.md](../CHANGELOG.md)
 
