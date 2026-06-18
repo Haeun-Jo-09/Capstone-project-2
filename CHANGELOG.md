@@ -20,6 +20,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Removed
 
 - `.github/workflows/deploy-cloudflare-pages.yml`
+- `wrangler.toml` (Workers 배포용 — Pages Git 연동에서는 불필요)
 
 ---
 
