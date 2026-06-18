@@ -160,7 +160,8 @@ Josh가 Cursor + MCP 도구로 **통합·배포·키 설정·검증**을 함께 
 - [x] GCP OAuth + Supabase Google Provider
 - [x] live 로그인 + AI Coach 검증
 - [x] Workers `capstone-project-2` 삭제
-- [ ] **`main` merge** + CF Pages production branch → `main`
+- [ ] **`main` merge** + CF Pages production branch → `main`  
+  → 내일 아침 Ben & Haeun이 진행: **[docs/MAIN_MERGE_GUIDE.md](docs/MAIN_MERGE_GUIDE.md)**
 
 `main` merge 후에도 live URL(`ai-planner-7y0.pages.dev`)은 동일하게 유지됩니다.  
 Production branch만 `integrate/...` → `main`으로 바꾸면 됩니다.

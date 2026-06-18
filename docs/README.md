@@ -13,6 +13,7 @@
 | [DEVELOPMENT_PLAN.md](./DEVELOPMENT_PLAN.md) | 개발 로드맵, Phase별 계획, 기술 스택, 백로그 |
 | [SOCIAL_LOGIN_SETUP_GUIDE.md](./SOCIAL_LOGIN_SETUP_GUIDE.md) | Google OAuth (Supabase Auth) 설정 가이드 |
 | [DEPLOY.md](./DEPLOY.md) | **Cloudflare Pages + Supabase 키/배포 설정** |
+| [MAIN_MERGE_GUIDE.md](./MAIN_MERGE_GUIDE.md) | **main merge 체크리스트 (Ben & Haeun, 2026-06-19)** |
 | [../CHANGELOG.md](../CHANGELOG.md) | 버전별 변경 이력 (커밋 기반) |
 
 ---
