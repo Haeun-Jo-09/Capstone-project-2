@@ -8,7 +8,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Supervisor Session Note — Josh (2026-06-18)
 
-> **To: Ben & Jo**  
+> **To: Ben & Haeun**  
 > 오늘 세션에서 백엔드·배포를 처음 다루는 팀이 이해할 수 있도록, **무엇을 왜 했는지** 흐름 위주로 정리합니다.  
 > 코드 디테일보다 **“우리 앱이 이제 어떻게 돌아가는지”** 를 같이 공유하는 메모입니다.
 
@@ -16,11 +16,11 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 #### 1. 오늘 한 일 한 줄 요약
 
-**Ben이 만든 Supabase 백엔드 코드를 안전하게 합치고, Cloudflare Pages에 실제로 배포해서, Google 로그인 + AI Coach까지 live에서 확인했습니다.**
+**Ben & Jo가 만든 Supabase 백엔드 코드를 안전하게 합치고, Cloudflare Pages에 실제로 배포해서, Google 로그인 + AI Coach까지 live에서 확인했습니다.**
 
 - Live URL: **https://ai-planner-7y0.pages.dev**
 - 테스트 브랜치: `integrate/ben-jo-supabase-deploy` (아직 `main` merge 전)
-- Supabase 프로젝트: `bcnhmrvylpkocetfqidh` (Jo 계정)
+- Supabase 프로젝트: `bcnhmrvylpkocetfqidh` (Haeun 계정)
 
 ---
 
@@ -69,7 +69,7 @@ Josh가 Cursor + MCP 도구로 **통합·배포·키 설정·검증**을 함께 
 2. `main`에 바로 merge하지 않고 **`integrate/ben-jo-supabase-deploy`** 브랜치 생성
 3. 충돌 없이 fast-forward merge 성공 → 기존 `main` 작업 보호
 
-**Phase B — Supabase 백엔드 확인 (Jo 프로젝트)**
+**Phase B — Supabase 백엔드 확인 (Haeun 프로젝트)**
 
 - DB 테이블 6개 + RLS(행 단위 보안) 적용 확인
 - Edge Functions `ai-coach`, `generate-roadmap` 배포 확인
@@ -96,12 +96,12 @@ Josh가 Cursor + MCP 도구로 **통합·배포·키 설정·검증**을 함께 
   - `scripts/generate-config.js` + `npm run build`
   - CF env: `SUPABASE_URL`, `SUPABASE_ANON_KEY`
 
-**Phase E — GitHub push (Jo 계정)**
+**Phase E — GitHub push (Haeun 계정)**
 
-- 로컬 Git이 Ben 계정(`shualoalumin`)으로 되어 있어 `Haeun-Jo-09` repo push 403
-- `gh auth login`으로 **Jo(`Haeun-Jo-09`)** 계정 전환 후 push 성공
+- 로컬 Git이 Josh 계정(`shualoalumin`)으로 되어 있어 `Haeun-Jo-09` repo push 403
+- `gh auth login`으로 **Haeun(`Haeun-Jo-09`)** 계정 전환 후 push 성공
 
-**Phase F — 키/URL 설정 (Dashboard 작업 — Jo)**
+**Phase F — 키/URL 설정 (Dashboard 작업 — Haeun)**
 
 | 어디 | 무엇을 |
 |------|--------|
@@ -126,7 +126,7 @@ Josh가 Cursor + MCP 도구로 **통합·배포·키 설정·검증**을 함께 
 | 사람 | 오늘 한 일 |
 |------|-----------|
 | **Ben** | Supabase Auth/DB/Edge Functions 프론트 연동 코드 PR (`feat/supabase-cloudflare-deploy`) |
-| **Jo** | Supabase·GitHub·Cloudflare **계정 소유**, Dashboard 키 입력, GitHub push 인증 |
+| **Haeun** | Supabase·GitHub·Cloudflare **계정 소유**, Dashboard 키 입력, GitHub push 인증 |
 | **Josh (supervisor)** | PR 통합 브랜치 전략, Workers→Pages 전환, 빌드 스크립트, MCP로 Supabase/CF 확인, 배포 문서 작성, 팀 가이드 |
 
 ---

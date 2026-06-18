@@ -27,14 +27,35 @@ Google login is handled through **Supabase Auth**, not the Google Identity Servi
 
 ## Step 3. Supabase redirect URLs
 
-In **Authentication → URL Configuration**:
+Supabase Dashboard UI가 바뀌었습니다. **Project Settings → Authentication**이 아니라 아래 경로를 사용하세요.
+
+### 찾는 방법 (2025~ UI)
+
+**방법 A — 직접 링크 (가장 빠름)**
+
+1. [URL Configuration 페이지 열기](https://supabase.com/dashboard/project/bcnhmrvylpkocetfqidh/auth/url-configuration)
+
+**방법 B — 사이드바**
+
+1. [Supabase Dashboard](https://supabase.com/dashboard/project/bcnhmrvylpkocetfqidh) 프로젝트 열기
+2. 왼쪽 **Authentication** 클릭
+3. 하위 메뉴에서 **Configuration** 또는 **URL Configuration** 선택  
+   - 예전 `Project Settings → Authentication`은 **단축 링크**만 남아 있을 수 있음
+4. **Site URL** / **Redirect URLs** 입력란 확인
+
+> **OAuth Server** 쪽 Redirect URI 설정과 혼동하지 마세요.  
+> Google 로그인용은 **Authentication → URL Configuration** (사용자 로그인 redirect)입니다.
+
+### 입력할 값
 
 - **Site URL:** `https://ai-planner-7y0.pages.dev` (production) or `http://localhost:5500` (local)
-- **Redirect URLs:** add:
+- **Redirect URLs:** **Add URL** 버튼으로 하나씩 추가:
   - `https://ai-planner-7y0.pages.dev/**`
   - `http://localhost:5500`
   - `http://127.0.0.1:5500`
   - `http://localhost:3000`
+
+변경 후 **Save** 클릭.
 
 ## Step 4. Test
 

@@ -88,12 +88,14 @@ npx wrangler delete capstone-project-2
 
 ### Auth Redirect URL (Pages URL 확정 후)
 
-**Authentication → URL Configuration**
+**Authentication → URL Configuration** (직접 링크: [url-configuration](https://supabase.com/dashboard/project/bcnhmrvylpkocetfqidh/auth/url-configuration))
+
+> 예전 위치 `Project Settings → Authentication`은 Dashboard 개편으로 **Authentication → Configuration / URL Configuration**으로 이동했습니다.
 
 | 필드 | 값 |
 |------|-----|
 | Site URL | `https://ai-planner-7y0.pages.dev` |
-| Redirect URLs | `https://ai-planner-7y0.pages.dev/**` |
+| Redirect URLs | `https://ai-planner-7y0.pages.dev/**` (Add URL로 추가) |
 | | `http://localhost:5500` |
 | | `http://127.0.0.1:5500` |
 
