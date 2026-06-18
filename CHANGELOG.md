@@ -15,7 +15,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Changed
 
 - Cloudflare Pages Git 연동 배포로 전환 (GitHub Actions 워크플로 제거)
-- Supabase Auth redirect URL 문서에 `capstone-project-2.pages.dev` 추가
+- Supabase Auth redirect URL 문서에 `ai-planner-7y0.pages.dev` 추가
 
 ### Removed
 

@@ -37,7 +37,7 @@ GitHub Actions 없이 **Cloudflare Pages Git 연동**으로 배포합니다.
 | Root directory | (비움) |
 
 5. **Environment variables** (Production + Preview) 추가 — 아래 2절 참고
-6. 배포 성공 후 URL 확인 (예: `https://capstone-project-2.pages.dev`)
+6. 배포 성공 후 URL 확인: `https://ai-planner-7y0.pages.dev`
 7. (선택) 기존 **Workers** `capstone-project-2` 프로젝트는 Settings에서 삭제해 중복 방지
 
 > Pages에는 **Deploy command / Version command** 필드가 없습니다.  
@@ -74,8 +74,8 @@ GitHub Actions 없이 **Cloudflare Pages Git 연동**으로 배포합니다.
 
 | 필드 | 값 |
 |------|-----|
-| Site URL | `https://capstone-project-2.pages.dev` |
-| Redirect URLs | `https://capstone-project-2.pages.dev/**` |
+| Site URL | `https://ai-planner-7y0.pages.dev` |
+| Redirect URLs | `https://ai-planner-7y0.pages.dev/**` |
 | | `http://localhost:5500` |
 | | `http://127.0.0.1:5500` |
 
