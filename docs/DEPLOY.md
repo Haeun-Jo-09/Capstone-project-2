@@ -61,7 +61,7 @@ https://bcnhmrvylpkocetfqidh.supabase.co/auth/v1/callback
 |------|-----|
 | Production branch | `integrate/ben-jo-supabase-deploy` (테스트) → 검증 후 `main` |
 | Framework preset | None |
-| Build command | `node scripts/generate-config.js` |
+| Build command | `npm run build` (또는 `node scripts/generate-config.js`) |
 | Build output directory | `/` |
 | Root directory | (비움) |
 
@@ -75,6 +75,21 @@ https://bcnhmrvylpkocetfqidh.supabase.co/auth/v1/callback
 | `SUPABASE_ANON_KEY` | Secret | Supabase anon/publishable key |
 
 배포는 **Git push 시 자동** 실행됩니다. `CLOUDFLARE_API_TOKEN`은 Git 연동 배포에 필요 없습니다.
+
+### origin push (Jo 계정)
+
+`Haeun-Jo-09/Capstone-project-2`에 push하려면 **Jo GitHub 계정**으로 인증해야 합니다.
+
+```powershell
+git push -u origin integrate/ben-jo-supabase-deploy
+```
+
+임시 백업: `ben-jo` fork(`shualoalumin/Capstone-project-2-Ben-Jo`)의 `integrate/ben-jo-supabase-deploy` 브랜치에 push되어 있습니다. Jo 계정에서:
+
+```powershell
+git fetch ben-jo integrate/ben-jo-supabase-deploy
+git push -u origin integrate/ben-jo-supabase-deploy
+```
 
 ---
 

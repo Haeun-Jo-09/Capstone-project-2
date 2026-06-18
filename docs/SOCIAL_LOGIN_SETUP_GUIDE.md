@@ -21,6 +21,7 @@ Google login is handled through **Supabase Auth**, not the Google Identity Servi
 3. **Authorized JavaScript origins:**
    - `http://localhost:5500` (or your local port)
    - `https://bcnhmrvylpkocetfqidh.supabase.co`
+   - `https://capstone-project-2.pages.dev`
 4. **Authorized redirect URIs:**
    - `https://bcnhmrvylpkocetfqidh.supabase.co/auth/v1/callback`
 
@@ -28,8 +29,9 @@ Google login is handled through **Supabase Auth**, not the Google Identity Servi
 
 In **Authentication → URL Configuration**:
 
-- **Site URL:** your production or local URL (e.g. `http://localhost:5500`)
-- **Redirect URLs:** add local dev URLs:
+- **Site URL:** `https://capstone-project-2.pages.dev` (production) or `http://localhost:5500` (local)
+- **Redirect URLs:** add:
+  - `https://capstone-project-2.pages.dev/**`
   - `http://localhost:5500`
   - `http://127.0.0.1:5500`
   - `http://localhost:3000`
